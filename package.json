@@ -1,0 +1,28 @@
+{
+  "name": "plucky-shell",
+  "version": "0.0.1",
+  "description": "run shell commands in plucky",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plucky-ci/plucky-shell.git"
+  },
+  "keywords": [
+    "shell",
+    "bash"
+  ],
+  "author": "Hung Chen <hung.chen.ucf@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plucky-ci/plucky-shell/issues"
+  },
+  "homepage": "https://github.com/plucky-ci/plucky-shell#readme",
+  "dependencies": {
+    "code": "^4.0.0",
+    "lab": "^11.1.0",
+    "plucky-pipeliner": "0.0.1"
+  }
+}
