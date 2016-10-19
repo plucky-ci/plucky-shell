@@ -19,7 +19,7 @@ class PluckyShell extends Task {
 		};
 
 		if(params.execFile) {
-			execFile(params.command, params.arguments, {cwd: '/Users/vchenhu/Projects/Tinder/plucky-ci/plucky-shell'}, cb);
+			execFile(params.command, params.arguments, {cwd: params.cwd}, cb);
 		} else {
 			exec(params.command, {cwd: params.cwd}, cb);
 		}

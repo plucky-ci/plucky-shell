@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/plucky-ci/plucky-shell#readme",
   "dependencies": {
+  },
+  "devDependency":  {
     "code": "^4.0.0",
     "lab": "^11.1.0",
     "plucky-pipeliner": "0.0.1"
