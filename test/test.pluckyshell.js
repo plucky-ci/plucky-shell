@@ -37,7 +37,7 @@ describe('PluckyShell', ()=>{
 		});
 	});
 
-	it('should try and run command but return a 1 and a ', (done) => {
+	it('should try and run command but return a 1 and a status string', (done) => {
 		const shell = new PluckyShell();	
 
 		shell.handler({params: {command: 'asdf'}}, (code, val) => {
@@ -47,7 +47,7 @@ describe('PluckyShell', ()=>{
 		});
 	});
 
-	it('should try and run file and return a 1 and a ', (done) => {
+	it('should try and run file and return a 1 and a status string', (done) => {
 		const shell = new PluckyShell();	
 
 		shell.handler({params: {command: './asdf.sh', execFile: true}}, (code, val) => {
