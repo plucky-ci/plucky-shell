@@ -3,7 +3,7 @@ const exec = require('child_process').exec;
 const execFile = require('child_process').execFile;
 
 class PluckyShell extends Task {
-	handler(state, next) {
+	execute(state, next) {
 		const {
 			params = {},
 		} = state;
