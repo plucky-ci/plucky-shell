@@ -1,6 +1,5 @@
 const {
   PluckyShell
-} = require('./src/PluckyShell');
+} = require('./src/pluckyshell');
 
-const pluckyShell = new PluckyShell();
-module.exports = pluckyShell;
+module.exports = PluckyShell;
