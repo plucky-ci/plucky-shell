@@ -18,7 +18,7 @@ describe('PluckyShell', ()=>{
 	it('should return return 0 and a result string', (done) => {
 		const shell = new PluckyShell();	
 
-		shell.handler({params: {command: 'ls'}}, (code, val) => {
+		shell.execute({params: {command: 'ls'}}, (code, val) => {
 			expect(code).to.equal(0);
 			expect(val.result).to.not.be.undefined();
 			expect(val.result).to.be.a.string();
@@ -29,7 +29,7 @@ describe('PluckyShell', ()=>{
 	it('should execute a file and return 0 and result string', (done) => {
 		const shell = new PluckyShell();	
 
-		shell.handler({params: {command: './test.sh', execFile: true}}, (code, val) => {
+		shell.execute({params: {command: './test.sh', execFile: true}}, (code, val) => {
 			expect(code).to.equal(0);
 			expect(val.result).to.not.be.undefined();
 			expect(val.result).to.be.a.string();
@@ -40,7 +40,7 @@ describe('PluckyShell', ()=>{
 	it('should try and run command but return a 1 and a status string', (done) => {
 		const shell = new PluckyShell();	
 
-		shell.handler({params: {command: 'asdf'}}, (code, val) => {
+		shell.execute({params: {command: 'asdf'}}, (code, val) => {
 			expect(code).to.equal(1);
 			expect(val.status).to.be.a.string();
 			done();
@@ -50,7 +50,7 @@ describe('PluckyShell', ()=>{
 	it('should try and run file and return a 1 and a status string', (done) => {
 		const shell = new PluckyShell();	
 
-		shell.handler({params: {command: './asdf.sh', execFile: true}}, (code, val) => {
+		shell.execute({params: {command: './asdf.sh', execFile: true}}, (code, val) => {
 			expect(code).to.equal(1);
 			expect(val.status).to.be.a.string();
 			done();
