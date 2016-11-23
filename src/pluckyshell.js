@@ -13,9 +13,9 @@ class PluckyShell extends Task {
 
 		const cb = (error, stdout, stderr) => {
 			if(error) {
-				return next(1, {status: stdout});
+				return next(1, {status: error.toString()});
 			}
-			return next(0, {result: stdout});
+			return next(0, {stdout, stderr});
 		};
 
 		if(params.execFile) {

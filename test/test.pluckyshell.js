@@ -15,13 +15,14 @@ const {
 const noop = ()=>{};
 
 describe('PluckyShell', ()=>{
-	it('should return return 0 and a result string', (done) => {
+	it('should return return 0 and a val object', (done) => {
 		const shell = new PluckyShell();	
 
 		shell.handler({params: {command: 'ls'}}, (code, val) => {
 			expect(code).to.equal(0);
-			expect(val.result).to.not.be.undefined();
-			expect(val.result).to.be.a.string();
+			expect(val).to.not.be.undefined();
+			expect(val).to.be.object();
+			expect(val.stdout).to.not.be.undefined();
 			done();
 		});
 	});
@@ -31,8 +32,7 @@ describe('PluckyShell', ()=>{
 
 		shell.handler({params: {command: './test.sh', execFile: true}}, (code, val) => {
 			expect(code).to.equal(0);
-			expect(val.result).to.not.be.undefined();
-			expect(val.result).to.be.a.string();
+			expect(val).to.be.object();
 			done();
 		});
 	});
