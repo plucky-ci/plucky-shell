@@ -19,7 +19,7 @@ class PluckyShell extends Task {
 			return next(0, {stdout, stderr});
 		};
 
-		const fileLoc = path.join(process.cwd(), params.cwd);
+		const fileLoc = path.join(process.cwd(), params.cwd || '');
 
 		if(params.execFile) {
 			execFile(params.command, params.arguments, {cwd: fileLoc}, cb);
